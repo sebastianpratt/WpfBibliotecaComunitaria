@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="BIBLIOTECA COMUNITARIA" HorizontalAlignment="Left" Height="36" Margin="246,24,0,0" VerticalAlignment="Top" Width="286"/>
         <Button Content="Autores" HorizontalAlignment="Left" Height="41" Margin="246,65,0,0" VerticalAlignment="Top" Width="156" Click="Button_Click"/>
-        <Button Content="Editoriales" HorizontalAlignment="Left" Height="55" Margin="246,140,0,0" VerticalAlignment="Top" Width="156"/>
+        <Button Content="Editoriales" HorizontalAlignment="Left" Height="55" Margin="246,140,0,0" VerticalAlignment="Top" Width="156" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

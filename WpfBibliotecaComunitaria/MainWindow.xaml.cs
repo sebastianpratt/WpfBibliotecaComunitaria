@@ -31,5 +31,12 @@ namespace WpfBibliotecaComunitaria
             win2.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Editoriales win3 = new Editoriales();
+            win3.Show();
+            this.Close();
+        }
     }
 }
