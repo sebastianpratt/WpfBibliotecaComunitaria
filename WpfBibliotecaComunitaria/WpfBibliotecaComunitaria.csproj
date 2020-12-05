@@ -76,6 +76,9 @@
     <Compile Include="Editorial.cs">
       <DependentUpon>ModelBiblio.tt</DependentUpon>
     </Compile>
+    <Compile Include="Editoriales.xaml.cs">
+      <DependentUpon>Editoriales.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Funcionario.cs">
       <DependentUpon>ModelBiblio.tt</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <DependentUpon>ModelBiblio.tt</DependentUpon>
     </Compile>
     <Page Include="Autores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editoriales.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
