@@ -24,5 +24,12 @@ namespace WpfBibliotecaComunitaria
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Autores win2 = new Autores();
+            win2.Show();
+            this.Close();
+        }
     }
 }
