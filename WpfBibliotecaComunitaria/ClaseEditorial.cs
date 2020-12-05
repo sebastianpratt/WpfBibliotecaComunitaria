@@ -10,11 +10,23 @@ namespace WpfBibliotecaComunitaria
 {
     public class ClaseEditorial
     {
-        public int ID_Marca
+        public int EditorialID
         {
             get; set;
         }
-        public string Nombre
+        public string NombreEditorial
+        {
+            get; set;
+        }
+        public string Direccion
+        {
+            get; set;
+        }
+        public string Telefono
+        {
+            get; set;
+        }
+        public int CiudadID
         {
             get; set;
         }
@@ -22,11 +34,11 @@ namespace WpfBibliotecaComunitaria
         public override string ToString()
         {
 
-            return this.Nombre;
+            return this.NombreEditorial;
         }
 
 
-        public static async Task<List<ClaseEditorial>> ObtenerEditorialSebastian()
+        public static async Task<List<ClaseEditorial>> ObtenerEditorial()
         {
 
             List<ClaseEditorial> lstMarcas = new List<ClaseEditorial>();
@@ -56,7 +68,7 @@ namespace WpfBibliotecaComunitaria
             return lstMarcas;
         }
 
-        public static async Task<bool> NuevaEditorialSebastian(ClaseEditorial m)
+        public static async Task<bool> NuevaEditorial(ClaseEditorial m)
         {
 
             using (var clientPratt = new HttpClient())
@@ -70,7 +82,7 @@ namespace WpfBibliotecaComunitaria
             }
         }
 
-        public static async Task<bool> ActualizarEditorialSebastian(ClaseEditorial m)
+        public static async Task<bool> ActualizarEditorial(ClaseEditorial m)
         {
 
             using (var clientPratt = new HttpClient())
@@ -83,7 +95,7 @@ namespace WpfBibliotecaComunitaria
             }
         }
 
-        public static async Task<bool> EliminarEditorialSebastian(ClaseEditorial m)
+        public static async Task<bool> EliminarEditorial(ClaseEditorial m)
         {
 
             using (var clientPratt = new HttpClient())
