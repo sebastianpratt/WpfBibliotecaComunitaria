@@ -70,6 +70,7 @@
     <Compile Include="Ciudad.cs">
       <DependentUpon>ModelBiblio.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClaseEditorial.cs" />
     <Compile Include="DetallePrestamo.cs">
       <DependentUpon>ModelBiblio.tt</DependentUpon>
     </Compile>
