@@ -17,19 +17,20 @@
         <Label Content="Telefono" HorizontalAlignment="Left" Margin="44,349,0,0" VerticalAlignment="Top"/>
         <Label Content="Mail" HorizontalAlignment="Left" Margin="45,389,0,0" VerticalAlignment="Top"/>
         <Label Content="Ciudad" HorizontalAlignment="Left" Margin="45,432,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="379,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="379,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="379,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="379,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="379,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="370,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="370,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="370,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="370,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-        <Button Content="Agregar" HorizontalAlignment="Left" Margin="573,189,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Actualizar" HorizontalAlignment="Left" Margin="573,248,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="573,321,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Menu" HorizontalAlignment="Left" Margin="573,389,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="26" Margin="232,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txtTipo" HorizontalAlignment="Left" Height="32" Margin="232,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txtN" HorizontalAlignment="Left" Height="32" Margin="232,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txtNo" HorizontalAlignment="Left" Height="32" Margin="232,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txta" HorizontalAlignment="Left" Height="32" Margin="232,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txtD" HorizontalAlignment="Left" Height="32" Margin="232,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txtT" HorizontalAlignment="Left" Height="32" Margin="232,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" RenderTransformOrigin="-1.032,1.188"/>
+        <TextBox x:Name="txtM" HorizontalAlignment="Left" Height="32" Margin="232,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txtc" HorizontalAlignment="Left" Height="32" Margin="232,432,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <Button Content="Agregar" HorizontalAlignment="Left" Margin="478,88,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1"/>
+        <Button Content="Actualizar" HorizontalAlignment="Left" Margin="573,96,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="670,93,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="1.5,-9.875" Click="Button_Click_3"/>
+        <Button Content="Menu" HorizontalAlignment="Left" Margin="358,101,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click" RenderTransformOrigin="-1.5,-10.575"/>
+        <ListBox x:Name="lstDispositivos"  Grid.Row="0" Margin="408,160,144,138" SelectionChanged="lstDispositivos_SelectionChanged" Loaded="lstDispositivos_Loaded"/>
 
     </Grid>
 </Window>

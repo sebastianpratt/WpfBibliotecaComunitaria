@@ -52,40 +52,18 @@ namespace WpfBibliotecaComunitaria
 
         private async void ObtenerDatos()
         {
-            List<ClaseEditorial> lista = await ClaseEditorial.ObtenerEditorial();
-            lstMarca.ItemsSource = lista;
+           
         }
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ClaseEditorial m = new ClaseEditorial();
-            //m.ID_Marca = Convert.ToInt32(txtIdMarca.Text);
-            m.NombreEditorial = txtINombre.Text;
-
-
-            await ClaseEditorial.NuevaEditorial(m);
-            ObtenerDatos();
-            limpiar();
+            
         }
 
         private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (lstMarca.SelectedItem != null)
-            {
-                ClaseEditorial MarcaSeleccionada = (ClaseEditorial)lstMarca.SelectedItem;
-                MarcaSeleccionada.EditorialID = Convert.ToInt32(txtId.Text);
-                MarcaSeleccionada.NombreEditorial = txtINombre.Text;
-                MarcaSeleccionada.Direccion = txtDi.Text;
-                MarcaSeleccionada.Telefono = txtTelefono.Text;
-                MarcaSeleccionada.CiudadID = Convert.ToInt32(txtCiudad.Text);
-
-
-                await ClaseEditorial.ActualizarEditorial(MarcaSeleccionada);
-                ObtenerDatos();
-                limpiar();
-            }
-            else
-                MessageBox.Show("Debe seleccionar primeramente la Marca a modificar ");
+            
+            
         }
 
         private void limpiar()
@@ -99,15 +77,7 @@ namespace WpfBibliotecaComunitaria
 
         private async void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if (lstMarca.SelectedItem != null)
-            {
-                ClaseEditorial MarcaSeleccionada = (ClaseEditorial)lstMarca.SelectedItem;
-                await ClaseEditorial.ActualizarEditorial(MarcaSeleccionada);
-                ObtenerDatos();
-                limpiar();
-            }
-            else
-                MessageBox.Show("Debe seleccionar primeramente la Marca a eliminar ");
+            
         }
     }
 }

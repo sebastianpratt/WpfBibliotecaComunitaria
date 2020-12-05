@@ -47,7 +47,7 @@ namespace WpfBibliotecaComunitaria
             using (var clientPratt = new HttpClient())
             {
 
-                clientPratt.BaseAddress = new Uri("https://localhost:44376/");
+                clientPratt.BaseAddress = new Uri("http://localhost:52373/");
 
 
                 clientPratt.DefaultRequestHeaders.Accept.Clear();
@@ -61,49 +61,49 @@ namespace WpfBibliotecaComunitaria
                 if (respuestaPratt.IsSuccessStatusCode)
                 {
 
-                    lstMarcas = await respuestaPratt.Content.ReadAsAsync<List<ClaseEditorial>>();
+                    //lstMarcas = await respuestaPratt.Content.ReadAsAsync<List<ClaseEditorial>>();
                 }
             }
 
             return lstMarcas;
         }
 
-        public static async Task<bool> NuevaEditorial(ClaseEditorial m)
+       /* public static async Task<bool> NuevaEditorial(ClaseEditorial m)
         {
 
             using (var clientPratt = new HttpClient())
             {
-                clientPratt.BaseAddress = new Uri("https://localhost:44376/");
+                clientPratt.BaseAddress = new Uri("http://localhost:52373/");
                 clientPratt.DefaultRequestHeaders.Accept.Clear();
                 clientPratt.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage respuestaPratt = await clientPratt.PostAsJsonAsync("api/Editoriales", m);
-                return respuestaPratt.IsSuccessStatusCode;
+                //HttpResponseMessage respuestaPratt = await clientPratt.PostAsJsonAsync("api/Editoriales", m);
+               // return respuestaPratt.IsSuccessStatusCode;
             }
         }
-
-        public static async Task<bool> ActualizarEditorial(ClaseEditorial m)
+       */
+        /*  public static async Task<bool> ActualizarEditorial(ClaseEditorial m)
         {
 
             using (var clientPratt = new HttpClient())
             {
-                clientPratt.BaseAddress = new Uri("https://localhost:44376/");
+                clientPratt.BaseAddress = new Uri("http://localhost:52373/");
                 clientPratt.DefaultRequestHeaders.Accept.Clear();
                 clientPratt.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage respuestaPratt = await clientPratt.PutAsJsonAsync("api/Editoriales/" + m.ID_Marca, m);
-                return respuestaPratt.IsSuccessStatusCode;
+                //HttpResponseMessage respuestaPratt = await clientPratt.PutAsJsonAsync("api/Editoriales/" + m.EditorialID, m);
+               // return respuestaPratt.IsSuccessStatusCode;
             }
         }
-
+        */
         public static async Task<bool> EliminarEditorial(ClaseEditorial m)
         {
 
             using (var clientPratt = new HttpClient())
             {
-                clientPratt.BaseAddress = new Uri("https://localhost:44376/");
+                clientPratt.BaseAddress = new Uri("http://localhost:52373/");
                 clientPratt.DefaultRequestHeaders.Accept.Clear();
                 clientPratt.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage respuestaPratt = await clientPratt.DeleteAsync("api/Editoriales/" + m.ID_Marca);
+                HttpResponseMessage respuestaPratt = await clientPratt.DeleteAsync("api/Editoriales/" + m.EditorialID);
                 return respuestaPratt.IsSuccessStatusCode;
             }
 

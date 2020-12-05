@@ -30,5 +30,42 @@ namespace WpfBibliotecaComunitaria
             win1.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void lstDispositivos_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void lstDispositivos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstDispositivos.SelectedItem != null)
+            {
+                Autor d = (Autor)lstDispositivos.SelectedItem;
+                txtId.Text = d.NroDocmeno.ToString();
+                txtTipo.Text = d.TipoDcumento.ToString();
+                txtN.Text = d.NombreFantasia;
+                txtNo.Text = d.Nombres;
+                txta.Text = d.Apellidos;
+                txtD.Text = d.Direccion;
+                txtT.Text = d.Telefono;
+                txtM.Text = d.Mail;
+                txtc.Text = d.Ciudad.ToString();
+            }
+        }
     }
 }
